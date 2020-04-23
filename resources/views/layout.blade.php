@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">All <span class="sr-only"></span></a>
+          <a class="nav-link" href="/all">All <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">My Account</a>
@@ -48,18 +48,14 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($books as $book)
             <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td scope="row">{{ $book->title }}</td>
+                <td>{{ $book->author }}</td>
+                <td>{{ $book->excerpt }}</td>
+                <td>N/A</td>
             </tr>
-            <tr>
-                <td scope="row"></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            @endforeach
         </tbody>
     </table>
     <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.</p>

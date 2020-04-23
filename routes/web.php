@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return view('welcome');
+});
+
+Route::get('/all', function () {
+
+    return view('layout', [
+        'books' => App\Book::all()
+    ]);
+
 });
