@@ -12,7 +12,6 @@
     <div class="row">
         <div class="col-md-2">
 <header>
-  <!-- Fixed navbar -->
   <ul class="nav flex-column float-left">
   <li class="nav-item">
     <a class="nav-link active" href="/">Home</a>
@@ -23,9 +22,16 @@
   <li class="nav-item">
     <a class="nav-link" href="/allauthors">All authors</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
+  <div>
+  <hr />
+</div>
+<li class="nav-item">
+    <a class="nav-link text-muted" href="/allusers">All users</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link text-muted" href="/inventory">Inventory</a>
+  </li>
+  <div>
 </ul>
   
   
@@ -44,4 +50,3 @@
 </footer>
 </body>
 </html>
-<!-- fixed-bottom -->

@@ -37,6 +37,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    protected $guarded = [];
+
+    public function path() {
+
+        return route('users.show', $this);
+    }
+
     public function books(){
         
         return $this->hasMany(Book::class);

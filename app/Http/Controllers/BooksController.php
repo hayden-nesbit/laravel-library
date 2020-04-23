@@ -23,7 +23,8 @@ class BooksController extends Controller
     
     public function show(Book $book)
     {
-
+        // $authors = $book->authors;
         return view('books.show', ['book' => $book]);
     }
+
 }

@@ -1,37 +1,37 @@
 @extends ('layout')
 
 @section ('content')
-<!-- Begin page content -->
 <div class="col-md-10">        
-    <h1 class="display-4">Eastside Library Home</h1>
-            <p class="lead">We've got books.</p>
+    <h1 class="display-4">Eastside Library Admin</h1>
         <hr class="my-4">
-            <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-            <p class="lead">
-            </p>
 </div>
 </div>
 
-<!-- <div class="mt-5 mb-5"> -->
 <div class="row">
-    <div class="col-md-4 offset-4 mt-5">
+    <div class="col-md-4 offset-4">
 <form>
+    <h3 class="mb-5">New Book Entry Form</h3>
   <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="email" class="form-control" id="user" name="user" placeholder="Enter username">
+    <label for="exampleFormControlInput1">Title</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Title">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    <label for="exampleFormControlSelect1">Author</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
   </div>
-  <button type="submit" class="btn btn-secondary">Login</button>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Excerpt</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-</div>
-</div>
-<!-- </div> -->
     <div class="p-5">
-        <br />
-        <br />
 </div>
 </main>
 

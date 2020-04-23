@@ -19,28 +19,10 @@ class CreateBooksTable extends Migration
             $table->text('excerpt');
             $table->text('genre');
             $table->integer('pages');
+            $table->integer('ISBN');
             $table->timestamps();
-
         });
 
-        Schema::create('book_user', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->unsignedBigInteger('book_id');
-            $table->unsignedBigInteger('user_id');
-            $table->timestamps();
-
-            $table->unique(['book_id', 'user_id']);
-
-            $table->foreign('book_id')
-                ->references('id')
-                ->on('books')
-                ->onDelete('cascade');
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
-    });
         
     }
 

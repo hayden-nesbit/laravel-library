@@ -33,9 +33,19 @@ Route::get('/allauthors', function () {
 
 });
 
+Route::get('/allusers', function () {
+
+    return view('users.index', [
+        'users' => App\User::all()
+    ]);
+
+});
+
 Route::get('/books', 'BooksController@index');
 Route::get('/books/{book}', 'BooksController@show')->name('books.show');
 Route::get('/authors', 'AuthorsController@index');
 Route::get('/authors/{author}', 'AuthorsController@show')->name('authors.show');
-Route::get('/authors/create', 'AuthorsController@create');
+Route::get('/users', 'UsersController@index');
+Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+// Route::get('/authors/create', 'AuthorsController@create');
 
