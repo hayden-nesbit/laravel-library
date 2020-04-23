@@ -18,11 +18,11 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Author</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+        
+        @foreach ($authors as $author)
+            <option value="{{ $author->id }}">{{ $author->name }}</option>
+        @endforeach
+
     </select>
   </div>
   <div class="form-group">
