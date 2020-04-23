@@ -17,14 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/all', function () {
+Route::get('/allbooks', function () {
 
-    return view('index', [
+    return view('books.index', [
         'books' => App\Book::all()
+    ]);
+
+});
+
+Route::get('/allauthors', function () {
+
+    return view('authors.index', [
+        'authors' => App\Author::all()
     ]);
 
 });
 
 Route::get('/books', 'BooksController@index');
 Route::get('/books/{book}', 'BooksController@show')->name('books.show');
-
+Route::get('/authors', 'AuthorsController@index');
+Route::get('/authors/{author}', 'AuthorsController@show')->name('authors.show');

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBooksTable extends Migration
+class CreateAuthorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,36 +13,31 @@ class CreateBooksTable extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::create('authors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('title');
-            $table->text('author');
-            $table->text('excerpt');
-            $table->text('genre');
-            $table->integer('pages');
+            $table->text('name');
+            $table->text('bio');
             $table->timestamps();
-
         });
-        
-        Schema::create('book_user', function (Blueprint $table) {
+
+        Schema::create('book_author', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('book_id');
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('author_id');
             $table->timestamps();
 
-            $table->unique(['book_id', 'user_id']);
+            $table->unique(['book_id', 'author_id']);
 
             $table->foreign('book_id')
                 ->references('id')
                 ->on('books')
                 ->onDelete('cascade');
 
-            $table->foreign('user_id')
+            $table->foreign('author_id')
                 ->references('id')
-                ->on('users')
+                ->on('authors')
                 ->onDelete('cascade');
-    });
-        
+        });
     }
 
     /**
@@ -52,6 +47,6 @@ class CreateBooksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('books');
+        Schema::dropIfExists('authors');
     }
 }
