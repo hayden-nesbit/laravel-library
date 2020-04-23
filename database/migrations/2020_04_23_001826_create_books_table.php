@@ -18,6 +18,7 @@ class CreateBooksTable extends Migration
             $table->text('title');
             $table->text('author');
             $table->text('excerpt');
+            $table->integer('pages');
             $table->timestamps();
             // $table->int('pages');
         });

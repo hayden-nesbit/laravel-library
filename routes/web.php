@@ -19,8 +19,12 @@ Route::get('/', function () {
 
 Route::get('/all', function () {
 
-    return view('layout', [
+    return view('index', [
         'books' => App\Book::all()
     ]);
 
 });
+
+Route::get('/books', 'BooksController@index');
+Route::get('/books/{book}', 'BooksController@show')->name('books.show');
+

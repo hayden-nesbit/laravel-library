@@ -10,7 +10,7 @@
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-secondary">
-    <a class="navbar-brand" href="#">Library</a>
+    <a class="navbar-brand" href="/">Library</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -34,34 +34,7 @@
   </nav>
 </header>
 
-<!-- Begin page content -->
-<main role="main" class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5">All books:</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Excerpt</th>
-                <th>Availability</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($books as $book)
-            <tr>
-                <td scope="row">{{ $book->title }}</td>
-                <td>{{ $book->author }}</td>
-                <td>{{ $book->excerpt }}</td>
-                <td>N/A</td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>main &gt; .container</code>.</p>
-    <p>Back to <a href="#">the default sticky footer</a> minus the navbar.</p>
-  </div>
-</main>
+@yield ('content')
 
 <footer class="footer mt-auto py-3">
   <div class="container">
