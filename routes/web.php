@@ -37,3 +37,5 @@ Route::get('/books', 'BooksController@index');
 Route::get('/books/{book}', 'BooksController@show')->name('books.show');
 Route::get('/authors', 'AuthorsController@index');
 Route::get('/authors/{author}', 'AuthorsController@show')->name('authors.show');
+Route::get('/authors/create', 'AuthorsController@create');
+

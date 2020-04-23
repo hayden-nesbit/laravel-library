@@ -26,4 +26,11 @@ class AuthorsController extends Controller
 
         return view('authors.show', ['author' => $author]);
     }
+
+    public function create()
+    {
+        // return view('authors.create', [
+        //     'books' => Book::all()
+        // ]);
+    }
 }

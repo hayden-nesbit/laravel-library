@@ -12,4 +12,9 @@ class Author extends Model
 
         return route('authors.show', $this);
     }
+
+    public function books() {
+
+        return $this->belongsToMany(Book::class);
+    }
 }

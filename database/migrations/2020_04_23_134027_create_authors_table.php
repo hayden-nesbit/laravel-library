@@ -20,7 +20,7 @@ class CreateAuthorsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('book_author', function (Blueprint $table) {
+        Schema::create('author_book', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('book_id');
             $table->unsignedBigInteger('author_id');
