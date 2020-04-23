@@ -10,6 +10,7 @@ $factory->define(Book::class, function (Faker $faker) {
         'author' => $faker->name,
         'title' => $faker->sentence,
         'excerpt' => $faker->paragraph,
+        'genre' => $faker->word,
         'pages' => $faker->unique()->randomNumber($nbDigits = 3)
     ];
 });
