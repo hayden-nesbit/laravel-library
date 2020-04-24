@@ -4,6 +4,8 @@
 
 <div class="col-md-10">
     <h1 class="mt-0">User: {{ $user->name }}</h1>
+    <p class="mt-3"><b>Email: </b>{{ $user->email }} </p>
+    <br />
     <table class="table">
         <thead>
             <tr>
