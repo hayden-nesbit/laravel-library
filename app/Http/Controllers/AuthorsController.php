@@ -28,8 +28,9 @@ class AuthorsController extends Controller
         }
     }
 
-    public function store(Author $author)
-    {
-        return view('authors.store');
-    }
+    // public function store() {
+    //     $author = new Author();
+
+    //     $author->t
+    // }
 }

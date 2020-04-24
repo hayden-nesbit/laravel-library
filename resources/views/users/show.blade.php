@@ -9,6 +9,7 @@
             <tr>
                 <th>Title</th>
                 <th>Author</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -19,7 +20,8 @@
                     @foreach ($check->book->authors as $author)
                 {{ $author->name }}
                 @endforeach
-            </td>                 
+                </td>
+                <td><a href="/users/{{ $user->id }}/{{ $check->book->id }}" type="button" class="btn btn-outline-danger btn-sm">Return</a></td> 
             </tr>
             @endforeach
         </tbody>

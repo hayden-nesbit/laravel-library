@@ -23,7 +23,10 @@
             </td> 
                 <!-- change to id from author_book -->
                 <td>{{ $book->excerpt }}</td>
-                <td>N/A</td>
+                
+                <td>
+               
+                </td>
             </tr>
             @endforeach
         </tbody>

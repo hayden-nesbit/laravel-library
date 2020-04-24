@@ -23,10 +23,9 @@ class UsersController extends Controller
         return view('users.show', ['user' => $user, 'checks' => $userChecks]);
     }
 
-    public function create()
+    public function update($id)
     {
-        // return view('authors.create', [
-        //     'books' => Book::all()
-        // ]);
+        $book = Book::find($id);
+        $book->check->user_id = null;
     }
 }

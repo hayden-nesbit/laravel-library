@@ -9,7 +9,7 @@
 
 <div class="row">
     <div class="col-md-4 offset-4">
-<form method="POST" action="/authors">
+<form method="POST" action="/books">
     @csrf
     
     <h3 class="mb-5">New Book Entry Form</h3>
@@ -18,15 +18,10 @@
     <input type="text" class="form-control" id="title" name="title">
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Author</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-        
-        @foreach ($authors as $author)
-            <option value="{{ $author->id }}">{{ $author->name }}</option>
-        @endforeach
-
-    </select>
+    <label for="exampleFormControlInput1">Genre</label>
+    <input type="text" class="form-control" id="genre" name="genre">
   </div>
+  
   <div class="form-group">
     <label for="exampleFormControlTextarea1">Excerpt</label>
     <textarea class="form-control" id="excerpt" name="excerpt" rows="3"></textarea>

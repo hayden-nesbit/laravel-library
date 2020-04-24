@@ -22,7 +22,7 @@ Route::get('/', function () {
 Route::get('/allbooks', function () {
 
     return view('books.index', [
-        'books' => App\Book::all()
+        'books' => App\Book::latest()->get()
     ]);
 
 });
@@ -42,18 +42,21 @@ Route::get('/allusers', function () {
     ]);
 });
 
-Route::get('/authors/create', function () {
+// Route::get('/books/create', function () {
 
-    return view('authors.create', [
-        'authors' => App\Author::all(),
-    ]);
-});
+//     return view('books.create', [
+//         'books' => App\Book::all(),
+//     ]);
+// });
 
 Route::get('/books', 'BooksController@index');
+Route::post('books/', 'BooksController@store');
+Route::get('/books/create', 'BooksController@create');
+Route::get('/books/{book}/edit', 'BooksController@edit');
+Route::get('/books/{book}', 'BooksController@update');
 Route::get('/books/{book}', 'BooksController@show')->name('books.show');
-Route::post('authors/', 'AuthorsController@store');
-// Route::get('/authors/create', 'AuthorsController@create');
 Route::get('/authors', 'AuthorsController@index');
 Route::get('/authors/{author}', 'AuthorsController@show')->name('authors.show');
 Route::get('/users', 'UsersController@index');
+Route::put('/users/{user}/', 'UsersController@update');
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
