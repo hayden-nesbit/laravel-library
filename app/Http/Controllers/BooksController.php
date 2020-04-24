@@ -42,8 +42,8 @@ class BooksController extends Controller
 
     public function edit(Book $book)
     {
-       
-        return redirect('books.edit', ['books' => $books]);
+    
+        return redirect('books.edit');
 
     }
 

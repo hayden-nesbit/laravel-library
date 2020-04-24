@@ -8,7 +8,7 @@
             <tr>
                 <th>Title</th>
                 <th>Author</th>
-                <th>Excerpt</th>
+                <th>Genre</th>
                 <th>Status</th>
             </tr>
         </thead>
@@ -22,7 +22,7 @@
                 @endforeach
             </td> 
                 <!-- change to id from author_book -->
-                <td>{{ $book->excerpt }}</td>
+                <td>{{ $book->genre }}</td>
                 
                 <td>
                
