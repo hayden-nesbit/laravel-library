@@ -29,7 +29,7 @@
     <a class="nav-link text-muted" href="/allusers">All users</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link text-muted" href="/inventory">Inventory</a>
+    <a class="nav-link text-muted" href="/authors/create">Update Inventory</a>
   </li>
   <div>
 </ul>

@@ -44,8 +44,8 @@ class User extends Authenticatable
         return route('users.show', $this);
     }
 
-    public function books(){
+    public function checks(){
         
-        return $this->hasMany(Book::class);
+        return $this->hasMany(Check::class);
     }
 }

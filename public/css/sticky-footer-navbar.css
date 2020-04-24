@@ -18,3 +18,8 @@
   #main-container {
     min-height: 100vh;
   }
+
+  /* #author-scroll {
+    overflow: scroll;
+    max-height: 150px;
+} */

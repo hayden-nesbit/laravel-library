@@ -2,6 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
+use App\Check;
+use App\Author;
+use App\Book;
+
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -14,8 +19,8 @@ class UsersController extends Controller
     
     public function show(User $user)
     {
-
-        return view('users.show', ['user' => $user]);
+        $userChecks = $user->checks;
+        return view('users.show', ['user' => $user, 'checks' => $userChecks]);
     }
 
     public function create()

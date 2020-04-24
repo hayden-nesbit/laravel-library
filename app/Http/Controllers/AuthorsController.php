@@ -10,13 +10,6 @@ class AuthorsController extends Controller
 {
     public function index()
     {
-        // if (request('tag')){
-        //     $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
-        // } else {
-
-        //     $articles = Article::latest()->get();
-        // }
-
 
         return view('authors.index', ['authors' => $author]);
     }
@@ -27,10 +20,16 @@ class AuthorsController extends Controller
         return view('authors.show', ['author' => $author]);
     }
 
-    public function create()
+    public function create(Author $authors)    
     {
-        // return view('authors.create', [
-        //     'books' => Book::all()
-        // ]);
+        {
+            //if $authors is empty, do same query from route
+            return view('authors.create', ['authors' => $authors]);
+        }
+    }
+
+    public function store(Author $author)
+    {
+        return view('authors.store');
     }
 }

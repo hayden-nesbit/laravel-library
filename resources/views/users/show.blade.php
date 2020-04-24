@@ -8,36 +8,24 @@
         <thead>
             <tr>
                 <th>Title</th>
-                <th>Status</th>
+                <th>Author</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($books as $book)
+            @foreach ($checks as $check)
             <tr>
-                <td scope="row"><a href="{{ route('books.show', $book) }}">{{ $book->title }}</a></td>
+                <td scope="row"><a href="{{ route('books.show', $check->book) }}">{{ $check->book->title}}</a></td>
                 <td>
-                    @foreach ($book->authors as $author)
+                    @foreach ($check->book->authors as $author)
                 {{ $author->name }}
                 @endforeach
-            </td> 
-                <!-- change to id from author_book -->
-                <td>{{ $book->excerpt }}</td>
-                <td>N/A</td>
+            </td>                 
             </tr>
             @endforeach
         </tbody>
     </table>
+</div>
 
-
-    <p class="mt-3"><b>Author:</b> 
-        @foreach ($book->authors as $author)
-            {{ $author->name }}
-        @endforeach
-       </p>
-    <p class="mt-3"><b>Summary:</b> {{ $book->excerpt }}</p>
-    <p class="mt-3"><b>Genre:</b> {{ $book->genre }}</p>
-    <p class="mt-3"><b>Page Count:</b> {{ $book->pages }}</p>
-  </div>
 
 
 @endsection
